@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Choropleth map of Victorian Median Housing prices",
+  "width": 800,
+  "height": 500,
+  "data": {
+    "url": "data/ckan_af33dd8c_0534_4e18_9245_fc64440f742e (1).json",
+    "format": {"type": "topojson", "feature": "suburb"}
+  },  
+  "projection": {
+    "type": "equalEarth"
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "lookup": "properties",
+          "from": {
+            "data": {
+              "url": "data/MELBOURNE_HOUSE_PRICES_LESS.csv",
+              "format": {"type": "csv"}
+            },
+            "key": "Suburb",
+            "fields": ["Price"]
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "white"},
+      "encoding": {
+        "color": {
+          "field": "Median Home Prices",
+          "title": "Median House Price (AUS$)",
+          "type": "quantitative",
+          "scale": {
+           "domain": [0,2000000]          
+          }
+        },
+        "tooltip": [
+          {"field": "properties.locality", "type": "nominal", "title": "Suburb"},
+          {"field": "Median Home Prices", "type": "quantitative", "title": "Median House Price"}        
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
