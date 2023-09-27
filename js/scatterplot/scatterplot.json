@@ -1,0 +1,36 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Scatterplot of Housing Prices by Number of Bedrooms",
+    "width": 400,
+    "height": 300,
+    "data": {"url": "data/Scatterplot data/Number of Bedrooms by Avg Price.csv"},
+    "encoding": {
+      "x": {"field": "Number of Bedrooms", "type": "nominal", "title": "Number of Bedrooms","scale": {"reverse":false}},
+      "y": {"field": "h", "type": "quantitative", "title": "Avg Price of Home $"},
+      "color": {"value": "blue"}
+    },
+    "layer": [
+      {
+        "mark": {"type": "square"},
+        "encoding": {
+          "y": {"field": "t", "type": "quantitative"},
+          "color": {"value": "green"}
+        }
+      },
+      {
+        "mark": {"type": "circle"},
+        "encoding": {
+          "y": {"field": "u", "type": "quantitative"},
+          "color": {"value": "red"}
+        }
+      },
+      {
+        "mark": {"type": "square"},
+        "encoding": {
+          "y": {"field": "h", "type": "quantitative"},
+          "color": {"value": "blue"}
+        }
+      }
+    ]
+  }
+  
