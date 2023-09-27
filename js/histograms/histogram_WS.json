@@ -1,0 +1,15 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "data/hist data/Median House Prices for Western Suburb.csv"},
+    "title": "Median House Prices in Western Suburbs",
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "bin": {"maxbins": 15},
+        "field": "Median House Price",
+        "title": "Median House Price"
+      },
+      "y": {"aggregate": "count", "title": "Frequency"}
+    } 
+  }
+  

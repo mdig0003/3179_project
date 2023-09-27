@@ -1,0 +1,35 @@
+{   
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "data/Line Chart/Scatterplot Region of Melbourne by Month.csv"},
+    "title": "Boxplot of Melbournes Regions based by monthly data",
+    "mark": {
+      "type": "boxplot",
+      "extent": "min-max"    
+    }, "transform": [
+        {"fold": [  "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"
+                ], "as": ["Month", "Value"]}
+      ],
+    "encoding": {
+      "y": {"field": "Region of Melbourne"
+      , "type": "nominal",
+      "title": ""
+    },
+      "x": {
+        "field": "Value",
+        "type": "quantitative",
+        "scale": {"zero": false},
+        "title": ""
+      }
+    }
+  }

@@ -6,21 +6,71 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
 </head>
 <body>
-  <div id="vis">
+  <!-- choropleth map (which doesn't work) <div id="vis">
     <script>
         var spec2 = "js/choropleth.json";
         vegaEmbed('#vis', spec2).then(function(result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
     </script>
-  </div>
-  <div id="violin">
+  </div> -->
+  <div id="hist_ES">
     <script>
-      var spec_vio = "js\violin.json";
-      vegaEmbed('#violin', spec_vio).then(function(result) {
+      var spec_hist_ES = "js/histograms/histogram_ES.json";
+      vegaEmbed('#hist_ES', spec_hist_ES).then(function(result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
   </script>
   </div>
+  <div id="hist_WS">
+    <script>
+      var spec_hist_WS = "js/histograms/histogram_WS.json";
+      vegaEmbed('#hist_WS', spec_hist_WS).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+  </script>
+  </div>
+  <div id="hist_NS">
+    <script>
+      var spec_hist_NS = "js/histograms/histogram_NS.json";
+      vegaEmbed('#hist_NS', spec_hist_NS).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+  </script>
+  </div>
+  <div id="hist_SS">
+    <script>
+      var spec_hist_SS = "js/histograms/histogram_SS.json";
+      vegaEmbed('#hist_SS', spec_hist_SS).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+  </script>
+  </div>
+  <div id="hist_SES">
+    <script>
+      var spec_hist_SES = "js/histograms/histogram_SES.json";
+      vegaEmbed('#hist_SES', spec_hist_SES).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+  </script>
+  </div>
+</div>
+<div id="line_chart">
+  <script>
+    var line_chart_region = "js/line chart/linechart.json";
+    vegaEmbed('#line_chart', line_chart_region).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+</script>
+</div>
+<div id="boxplot">
+  <script>
+    var boxplot = "js/boxplot/boxplot.json";
+    vegaEmbed('#boxplot', boxplot).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+</script>
+</div>
+
 </body>
 </html>
