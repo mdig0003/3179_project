@@ -6,14 +6,14 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
 </head>
 <body>
-  <!-- choropleth map (which doesn't work) <div id="vis">
+  <div id="vis">
     <script>
-        var spec2 = "js/choropleth.json";
+        var spec2 = "js/choropleth/choropleth.json";
         vegaEmbed('#vis', spec2).then(function(result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
     </script>
-  </div> -->
+  </div> 
   <div id="hist_ES">
     <script>
       var spec_hist_ES = "js/histograms/histogram_ES.json";
@@ -87,6 +87,7 @@
     }).catch(console.error);
 </script>
 </div>
+<!--
 <div id="violin">
   <script>
     var violin = "js/violin/violin.json";
@@ -94,6 +95,6 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 </script>
-</div>
+</div> -->
 </body>
 </html>

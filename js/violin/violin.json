@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega/v3.json",
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
   "width": 500,
   "padding": 5,
 
@@ -12,34 +12,37 @@
   },
 
   "signals": [
-    { "name": "fields",
-      "value": ["petalWidth", "petalLength", "sepalWidth", "sepalLength"] },
     { "name": "plotWidth", "value": 60 },
-    { "name": "height", "update": "(plotWidth + 10) * length(fields)"},
-    { "name": "bandwidth", "value": 0 },
-    { "name": "steps", "value": 100}
+    { "name": "height", "update": "(plotWidth + 10) * 3"},
+    { "name": "trim", "value": true,
+      "bind": {"input": "checkbox"} },
+    { "name": "bandwidth", "value": 0,
+      "bind": {"input": "range", "min": 0, "max": 200, "step": 1} }
   ],
 
   "data": [
     {
       "name": "iris",
-      "url": "https://vega.github.io/vega-datasets/data/iris.json",
+      "url": "data/violin/Summary values for violin plot.csv",
+      "format": {"type": "csv"},  
       "transform": [
         {
-          "type": "fold",
-          "fields": {"signal": "fields"},
-          "as": ["organ", "value"]
+          "type": "aggregate",
+          "fields": ["Type", "Price"],
+          "ops": ["mean"],
+          "as": ["type","value"]
         }
       ]
     }
   ],
+  
 
   "scales": [
     {
       "name": "layout",
       "type": "band",
       "range": "height",
-      "domain": {"data": "iris", "field": "organ"}
+      "domain": {"data": "iris", "field": "type"}
     },
     {
       "name": "xscale",
@@ -67,13 +70,13 @@
         "facet": {
           "data": "iris",
           "name": "organs",
-          "groupby": "organ"
+          "groupby": "type"
         }
       },
 
       "encode": {
         "enter": {
-          "yc": {"scale": "layout", "field": "organ", "band": 0.5},
+          "yc": {"scale": "layout", "field": "type", "band": 0.5},
           "height": {"signal": "plotWidth"},
           "width": {"signal": "width"}
         }

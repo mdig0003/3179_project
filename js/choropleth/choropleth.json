@@ -1,46 +1,40 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Choropleth map of Victorian Median Housing prices",
-  "width": 800,
-  "height": 500,
+  "width": 500,
+  "height": 300,
+  "title": "Melbourne Median Prices",
   "data": {
-    "url": "data/ckan_af33dd8c_0534_4e18_9245_fc64440f742e (1).json",
-    "format": {"type": "topojson", "feature": "suburb"}
-  },  
-  "projection": {
-    "type": "equalEarth"
+    "url": "data/choropleth map/suburb-10-vic (1).json",
+    "format": {
+      "type": "topojson",
+      "feature": "suburb-10-vic"
+    }
   },
-  "layer": [
+  "transform": [
     {
-      "transform": [
-        {
-          "lookup": "properties",
-          "from": {
-            "data": {
-              "url": "data/MELBOURNE_HOUSE_PRICES_LESS.csv",
-              "format": {"type": "csv"}
-            },
-            "key": "Suburb",
-            "fields": ["Price"]
-          }
-        }
-      ],
-      "mark": {"type": "geoshape", "stroke": "white"},
-      "encoding": {
-        "color": {
-          "field": "Median Home Prices",
-          "title": "Median House Price (AUS$)",
-          "type": "quantitative",
-          "scale": {
-           "domain": [0,2000000]          
-          }
+      "lookup": "properties.vic_loca_2",
+      "from": {
+        "data": {
+          "url": "data/choropleth map/map.csv"
         },
-        "tooltip": [
-          {"field": "properties.locality", "type": "nominal", "title": "Suburb"},
-          {"field": "Median Home Prices", "type": "quantitative", "title": "Median House Price"}        
-        ]
+        "key": "SUBURB",
+        "fields": ["Median House Price"]
       }
     }
-  ],
-  "config": {}
+  ],  
+  "projection": {
+    "type": "equirectangular"
+  },  
+  "mark": "geoshape",
+  "encoding": {
+    "color": {
+      "field": "Median House Price",
+      "title": "Median House Price ($AUS)",
+      "type": "quantitative",
+      "scale": {
+        "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"], 
+        "domain": [0,2200000]
+       }
+    }
+  }
 }
