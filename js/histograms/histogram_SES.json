@@ -1,8 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {"url": "data/hist data/Median House Price of South Eastern Suburbs.csv"},
-    "title": "Median House Prices in South Eastern Suburbs",
+    "title": "South Eastern Suburbs",
     "mark": "bar",
+    "width": 150,
+    "height": 150,
     "encoding": {
       "x": {
         "bin": {"maxbins": 15},

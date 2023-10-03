@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 500,
-  "height": 300,
+  "width": 400,
+  "height": 250,
   "title": "Melbourne Median Prices",
   "data": {
     "url": "data/choropleth map/suburb-10-vic (1).json",

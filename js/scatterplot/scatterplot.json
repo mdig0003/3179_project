@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Scatterplot of Housing Prices by Number of Bedrooms",
-    "width": 400,
-    "height": 300,
+    "width": 200,
+    "height": 150,
     "data": {"url": "data/Scatterplot data/Number of Bedrooms by Avg Price.csv"},
     "encoding": {
       "x": {"field": "Number of Bedrooms", "type": "nominal", "title": "Number of Bedrooms","scale": {"reverse":false}},

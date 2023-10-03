@@ -1,100 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
+    <title>Vega-Lite Bar Chart</title>
+    <meta charset="utf-8" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
+    <script src="js/choropleth_map.js"></script>
+    <script src="js/histograms/hist_ES.js"></script>
+    <script src="js\hist_ES.js"></script>
+    <script src="js\hist_NS.js"></script>
+    <script src="js\hist_SES.js"></script>
+    <script src="js\hist_WS.js"></script>
+    <script src="js\hist_SS.js"></script>
+    <script src="js/boxplot.js"></script>
+    <script src="js\line_chart.js"></script>
+    <script src="js\treemap.js"></script>
+    <script src="js\violin.js"></script>
+    <script src="js\scatterplot.js"></script>
+
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <div id="vis">
-    <script>
-        var spec2 = "js/choropleth/choropleth.json";
-        vegaEmbed('#vis', spec2).then(function(result) {
-          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        }).catch(console.error);
-    </script>
-  </div> 
-  <div id="hist_ES">
-    <script>
-      var spec_hist_ES = "js/histograms/histogram_ES.json";
-      vegaEmbed('#hist_ES', spec_hist_ES).then(function(result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-      }).catch(console.error);
-  </script>
-  </div>
-  <div id="hist_WS">
-    <script>
-      var spec_hist_WS = "js/histograms/histogram_WS.json";
-      vegaEmbed('#hist_WS', spec_hist_WS).then(function(result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-      }).catch(console.error);
-  </script>
-  </div>
-  <div id="hist_NS">
-    <script>
-      var spec_hist_NS = "js/histograms/histogram_NS.json";
-      vegaEmbed('#hist_NS', spec_hist_NS).then(function(result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-      }).catch(console.error);
-  </script>
-  </div>
-  <div id="hist_SS">
-    <script>
-      var spec_hist_SS = "js/histograms/histogram_SS.json";
-      vegaEmbed('#hist_SS', spec_hist_SS).then(function(result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-      }).catch(console.error);
-  </script>
-  </div>
-  <div id="hist_SES">
-    <script>
-      var spec_hist_SES = "js/histograms/histogram_SES.json";
-      vegaEmbed('#hist_SES', spec_hist_SES).then(function(result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-      }).catch(console.error);
-  </script>
-  </div>
-</div>
-<div id="line_chart">
-  <script>
-    var line_chart_region = "js/line chart/linechart.json";
-    vegaEmbed('#line_chart', line_chart_region).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-</script>
-</div>
-<div id="boxplot">
-  <script>
-    var boxplot = "js/boxplot/boxplot.json";
-    vegaEmbed('#boxplot', boxplot).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-</script>
-</div>
-<div id="scatterplot">
-  <script>
-    var scatterplot = "js/scatterplot/scatterplot.json";
-    vegaEmbed('#scatterplot', scatterplot).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-</script>
-</div>
-<div id="treemap">
-  <script>
-    var treemap = "js/Treemap/treemap.json";
-    vegaEmbed('#treemap', treemap).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-</script>
-</div>
-<!--
-<div id="violin">
-  <script>
-    var violin = "js/violin/violin.json";
-    vegaEmbed('#violin', violin).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-</script>
-</div> -->
+    <h1>Melbourne's Real Estate Market</h1>
+
+    <div id="grouped-container">
+      <h2>Hottest Property in Melbourne</h2>
+      <div id="vis"></div>
+    </div>
+
+    <div id="grouped-container">
+      <h2>Hottest Property in Melbourne</h2>
+      <div id="treemap"></div>
+      <div class ="hist-container">
+      <div id="scatterplot"></div>
+      </div>
+    </div>
+
+    <div id="grouped-container">
+        <h2>Affordability</h2>
+        <h2>Median House Prices of different Regions</h2>
+        <div>
+        <div class="hist-container" id="hist_ES"></div>
+        <div class="hist-container" id="hist_WS"></div>
+        <div class="hist-container" id="hist_NS"></div>
+        <div class="hist-container" id="hist_SS"></div>
+        <div class="hist-container" id="hist_SES"></div>
+        </div>
+
+        
+        <div if="grouped-container">
+          <div class="hist-container" id="line_chart"></div>
+          <div class="hist-container" id="boxplot"></div>
+        </div>    
+    </div>
+    
 </body>
 </html>
