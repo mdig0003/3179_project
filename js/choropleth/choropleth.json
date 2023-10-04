@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 400,
+  "width": 300,
   "height": 250,
-  "title": "Melbourne Median Prices",
+  "title": "Melbourne's Median House Prices",
   "data": {
     "url": "data/choropleth map/suburb-10-vic (1).json",
     "format": {
@@ -21,20 +21,56 @@
         "fields": ["Median House Price"]
       }
     }
-  ],  
+  ],
   "projection": {
     "type": "equirectangular"
-  },  
-  "mark": "geoshape",
-  "encoding": {
-    "color": {
-      "field": "Median House Price",
-      "title": "Median House Price ($AUS)",
-      "type": "quantitative",
-      "scale": {
-        "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"], 
-        "domain": [0,2200000]
-       }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "geoshape",
+        "stroke": "black",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "color": {
+          "field": "Median House Price",
+          "title": "Median House Price ($AUS)",
+          "type": "quantitative",
+          "scale": {
+            "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"],
+            "domain": [0, 2200000]
+          },
+          "default": "gray" 
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "geoshape",
+        "fill": "gray", 
+        "stroke": "black", 
+        "strokeWidth": 0.5
+      },
+      "transform": [
+        {
+          "filter": {"field": "Median House Price", "equal": null} 
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "rect",
+        "fill": "transparent",
+        "stroke": "black",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {"value": 15},
+        "y": {"value": 0},
+        "x2": {"value": 285},
+        "y2": {"value": 250}
+      }
     }
-  }
+  ]
 }
