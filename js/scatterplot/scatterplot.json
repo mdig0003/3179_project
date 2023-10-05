@@ -1,12 +1,12 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Scatterplot of Housing Prices by Number of Bedrooms",
-    "width": 200,
+    "width": 400,
     "height": 150,
     "data": {"url": "data/Scatterplot data/Number of Bedrooms by Avg Price.csv"},
     "encoding": {
       "x": {"field": "Number of Bedrooms", "type": "nominal", "title": "Number of Bedrooms","scale": {"reverse":false}},
-      "y": {"field": "h", "type": "quantitative", "title": "Avg Price of Home $"},
+      "y": {"field": "h", "type": "quantitative", "title": "Avg Price of Home ($AUS)"},
       "color": {"value": "blue"}
     },
     "layer": [

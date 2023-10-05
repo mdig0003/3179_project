@@ -3,8 +3,8 @@
     "data": {"url": "data/hist data/Median House Prices for Western Suburb.csv"},
     "title": "Western Suburbs",
     "mark": "bar",
-    "width": 150,
-    "height": 150,
+    "width": 350,
+    "height": 350,
     "encoding": {
       "x": {
         "bin": {"maxbins": 15},

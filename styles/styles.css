@@ -3,6 +3,7 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    text-align: center;
   }
 
 h1 {
@@ -12,35 +13,9 @@ h1 {
     color: #fff;
   }
   
-
-#treemap-scatter-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-/* Style for individual treemap and scatterplot */
-#treemap,
-#scatterplot,
-#line_chart {
-    flex: 1;
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-}
-
-#vis {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   
   /* Style for the histogram containers */
-  .hist-container {
+.hist-container {
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -48,12 +23,71 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-  #grouped-container {
-    background-color: #fff;
-    margin: 20px auto;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+
+/* Style for the dropdown box */
+#hist-dropdown {
+  display: block;
+  margin: 20px auto;
 }
+
+/* Center each visualization container */
+#hist_ES,
+#hist_WS,
+#hist_NS,
+#hist_SS,
+#hist_SES {
+  margin: 10px auto;
+  display: flex;
+}
+.hist-container {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly */
+}
+
+#treemap {
+  flex: 1; /* Take up available space */
+}
+
+#scatterplot {
+  width: 50%; /* Adjust the width as needed */
+  /* Optionally, you can add margin to separate the treemap and scatterplot */
+  margin-left: 10px;
+}
+
+#scatterplot_dist {
+  width: 50%; /* Adjust the width as needed */
+}
+#grouped-container {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start; /* Align items to the top */
   
+}
+
+.left {
+  width: 50%; /* Adjust the width as needed */
+}
+
+.right {
+  width: 50%; /* Adjust the width as needed */
+}
+
+/* Optionally, add margin to separate the treemap and scatterplots */
+.right {
+  margin-left: 5px;
+}
+
+/* Clear floats to prevent issues with other elements */
+.container-flex::after {
+  content: "";
+  display: table;
+  clear: both;
+}
   

@@ -39,7 +39,7 @@
           "type": "quantitative",
           "scale": {
             "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"],
-            "domain": [0, 2200000]
+            "domain": [0, 2500000]
           },
           "default": "gray" 
         }
@@ -48,7 +48,7 @@
     {
       "mark": {
         "type": "geoshape",
-        "fill": "gray", 
+        "fill": "lightgray", 
         "stroke": "black", 
         "strokeWidth": 0.5
       },

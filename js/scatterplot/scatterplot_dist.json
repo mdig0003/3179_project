@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Scatterplot of Housing Prices by Number of Bedrooms",
-    "width": 200,
+    "title": "Distance from CBD by Avg Home Price",
+    "width": 400,
     "height": 150,
     "data": {"url": "data/Scatterplot data/Distance vs type of home.csv"},
     "encoding": {
