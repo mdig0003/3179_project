@@ -1,41 +1,46 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Distance from CBD by Avg Home Price",
-    "width": 350,
-    "height": 150,
-    "config": {"background": "transparent"},
-    "data": {"url": "data/Scatterplot data/Distance vs type of home.csv"},
-    "encoding": {
-      "x": {"field": "Distance", "type": "quantitative", "title": "Distance from CBD","scale": {"reverse":false}},
-      "y": {"field": "h", "type": "quantitative", "title": "Avg Price of Home $"},
-      "color": {"value": "blue"}
-    },
-    "layer": [
-      {
-        "mark": {"type": "square"},
-        "encoding": {
-          "y": {"field": "t", "type": "quantitative"},
-          "color": {"value": "green"},
-          "tooltip": {"field": "t","title":null}
-        }
-      },
-      {
-        "mark": {"type": "circle"},
-        "encoding": {
-          "y": {"field": "u", "type": "quantitative"},
-          "color": {"value": "red"},
-          "tooltip": {"field": "u","title":null}
-
-        }
-      },
-      {
-        "mark": {"type": "square"},
-        "encoding": {
-          "y": {"field": "h", "type": "quantitative"},
-          "color": {"value": "blue"},
-          "tooltip": {"field": "h","title":null}
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Distance from CBD by Avg Home Price",
+  "width": 350,
+  "height": 150,
+  "config": {"background": "transparent"},
+  "data": {
+    "url": "data/Scatterplot data/Distance vs type of home.csv",
+    "format": {"type": "csv"}  
+  },
+  "transform": [
+    {"filter": "datum.h !== '' && datum.t !== '' && datum.u !== ''"} 
+  ],
+  "encoding": {
+    "x": {"field": "Distance", "type": "quantitative", "title": "Distance from CBD", "scale": {"reverse": false}},
+    "y": {"field": "h", "type": "quantitative", "title": "Avg Price of Home $"},
+    "color": {"value": "blue"}
+  },
+  "layer": [
+    {
+      "mark": {"type": "square"},
+      "encoding": {
+        "y": {"field": "t", "type": "quantitative"},
+        "color": {"value": "green"},
+        "tooltip": {"field": "t", "title": "Town House Avg Cost ($AUS)", 
+                    "format": "$.0f" , "type": "quantitative"}
       }
-    ]
-  }
-  
+    },
+    {
+      "mark": {"type": "circle"},
+      "encoding": {
+        "y": {"field": "u", "type": "quantitative"},
+        "color": {"value": "red"},
+        "tooltip": {"field": "u", "title": "Town House Avg Cost ($AUS)", "format": "$.0f"}
+      }
+    },
+    {
+      "mark": {"type": "square"},
+      "encoding": {
+        "y": {"field": "h", "type": "quantitative"},
+        "color": {"value": "blue"},
+        "tooltip": {"field": "h", "title": "Town House Avg Cost ($AUS)", "format": "$.0f"}
+      }
+    }
+  ]
+}
