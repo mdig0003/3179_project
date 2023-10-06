@@ -2,8 +2,10 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {"url": "data/hist data/Eastern Suburb Median House Price.csv"},
     "title": "Eastern Suburbs",
+    "config": {"background": "transparent"},
     "width": 350,
-    "height": 350,
+    "height": 200,
+    "background": "transparent",
     "mark": "bar",
     "encoding": {
       "x": {
@@ -11,7 +13,6 @@
         "field": "Median House Price",
         "title": "Median House Price"
       },
-      "y": {"aggregate": "count", "title": "Frequency"}
-    } 
+      "y": {"aggregate": "count", "type":"quantitative", "title": "Frequency"}    } 
   }
   

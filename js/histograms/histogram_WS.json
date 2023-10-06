@@ -2,9 +2,10 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {"url": "data/hist data/Median House Prices for Western Suburb.csv"},
     "title": "Western Suburbs",
+    "config": {"background": "transparent"},
     "mark": "bar",
     "width": 350,
-    "height": 350,
+    "height": 200,
     "encoding": {
       "x": {
         "bin": {"maxbins": 15},

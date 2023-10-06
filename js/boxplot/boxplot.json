@@ -2,8 +2,9 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "data/Line Chart/Scatterplot Region of Melbourne by Month.csv"},
   "title": "Boxplot of Melbournes Regions based by monthly data",
+  "config": {"background": "transparent"},
   "height": 150,
-  "width":400,
+  "width":150,
   "mark": {
     "type": "boxplot",
     "extent": "min-max"    

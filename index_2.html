@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <title>Melbourne Real Estate</title>
+    <meta charset="utf-8" />
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+    <!-- Import vega-embed -->
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
+
+     <!-- Import pure.css -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+
+
+    <script src="js/choropleth_map.js"></script>
+    <script src="js/histograms/hist_ES.js"></script>
+    <script src="js\hist_ES.js"></script>
+    <script src="js\hist_NS.js"></script>
+    <script src="js\hist_SES.js"></script>
+    <script src="js\hist_WS.js"></script>
+    <script src="js\hist_SS.js"></script>
+    <script src="js/boxplot.js"></script>
+    <script src="js\line_chart.js"></script>
+    <script src="js\treemap.js"></script>
+    <script src="js\violin.js"></script>
+    <script src="js\scatterplot.js"></script>
+    <script src="js\scatterplot_dist.js"></script>
+    <script src="js/choropleth_house_sold.js"></script>
+<head>
+  <title>Melbourne Housing Prices (2015-2020)</title>
+  
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <!-- custom style -->
+  <style>
+    * {
+      font-family: 'Oxygen', sans-serif;
+      line-height: 1.5;
+    }
+
+    h1 {
+      font-weight: 900;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background-image: url(styles/photo-1612415491873-144fd5e03169.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed ;  
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .page {
+      width: 750px;
+      background-color: white;
+      margin: auto;
+      padding: 70px;
+      padding-top: 35px;
+    }
+
+    .vis-container {
+      width: 70%;
+    }
+
+    .description h2,
+    h1 {
+      margin-top: 10px;
+    }
+
+    .description-right {
+      padding-left: 10px;
+    }
+
+    .description-left {
+      padding-right: 10px;
+    }
+
+    .pure-g {
+      margin-bottom: 25px;
+    }
+
+    .small-font {
+      font-size: 13px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- Title and subtitle -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1 style="font-family: Arial, Helvetica, sans-serif;">Melbourne Housing Prices (2015-2020)</h1>
+        <p>The dataset used in this project is sourced from Kaggle, comprising Melbourne real estate data from Domain.com.au. 
+            It offers detailed information about property address, type, price, location, and more. This dataset assists 
+            in finding affordable housing in metropolitan Melbourne by enabling users to analyze property prices and key metrics, 
+            aiding informed decisions for investors and homebuyers.</p>
+        <h3>Choropleth Map of Metropolitan Melbourne</h3>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- Choropleth map -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="vis" class="vis-container" style="padding-left: 170px;"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+
+    <!-- Caption/small text -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <p>
+
+            
+            The map highlights Melbourne's average property price range, with Boroondara, Bayside, and Stonnington council areas being the most expensive, while Moorabool 
+            and Melton City Council areas are the least expensive, as they are located in Greater Melbourne.
+        </p>
+        <h2>Affordability in Metro Melbourne</h2>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- Scatter plot -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h3>Treemap of Median House Prices</h3>
+        <div id="treemap" class="vis-container" style="padding-left: 160px;"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- More text -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <p>
+            Further insights gleaned from the treemap highlight the top 
+            suburbs in metropolitan Melbourne with the highest average home
+            prices from each region in Melbourne, shedding light on the areas where affordability may be 
+            particularly challenging.
+        </p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description description-right">
+          <h2>Trends across different Home Attributes</h2>
+          <p>In Melbourne, the pursuit of affordable housing is a multifaceted
+             challenge, as reflected in key trends observed in the available 
+             data. The scatterplot analysis reveals a noteworthy correlation 
+             between the number of bedrooms and home prices, with an increase 
+             in the number of bedrooms often resulting in higher property costs. 
+             Additionally, the scatterplot indicating that home prices tend to 
+             rise as properties draw closer to the city center underscores the 
+             impact of location on affordability.  </p>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <div id="scatterplot" class="vis-container"></div>
+        <div id="scatterplot_dist" class="vis-container"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div id="line_chart" class="vis-container"></div>
+        <div id="boxplot" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-2">
+        <div class="description description-right">
+          <h2>Melbourne Metro Region</h2>
+          <p>The Melbourne metropolitan region has generally reported lower bullying rates than across the state,
+            despite
+            having a range of NAPLAN scores (see above). This may be due to a variety of factors as any factor that
+            attracts
+            families to the city could be an explanation. Some possible examples are the parents education and
+            profession,
+            the funding of the school in question, or even the immigration status of students.
+          </p>
+          <p>
+            Within metropolitan Melbourne, KNOX reported the most bullying in 2016 at 22.6%, and Stonnington the least
+            at 6%.</p>
+        </div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description description-right">
+          <h2>Decline in Bullying</h2>
+          <p>Finally, inspecting the nine most populous LGAs, we find that there has been substantial improvement across
+            the years.
+            Across all nine LGAs, less than one in five students report having experienced bullying recently, a
+            significant improvement. </p>
+          <p>
+            Melbourne, in particular, has always had low bullying numbers, but has since been joined by Monash; both at
+            one student in every eight.
+          </p>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <div class="vis-container">
+            <div id="hist-dropdown">
+                <h4>Histogram of Melbourne Median Hosue Prices by Region</h4>
+                <label for="histogram-select">Select a Histogram:</label>
+                <select id="histogram-select">
+                  <option value="hist_ES" selected>Eastern Suburb</option> <!-- Set 'selected' here -->
+                  <option value="hist_WS">Western Suburbs</option>
+                  <option value="hist_NS">Northern Suburbs</option>
+                  <option value="hist_SS">Sothern Suburbs</option>
+                  <option value="hist_SES">South Eastern Suburb</option>
+                </select>
+              </div>       
+              <div id="hist_ES"></div>
+              <div id="hist_WS" style="display: none;"></div>
+              <div id="hist_NS" style="display: none;"></div>
+              <div id="hist_SS" style="display: none;"></div>
+              <div id="hist_SES" style="display: none;"></div>
+              <script>
+                const dropdown = document.getElementById("histogram-select");
+                const visualizationContainers = [
+                  "hist_ES",
+                  "hist_WS",
+                  "hist_NS",
+                  "hist_SS",
+                  "hist_SES",
+                ];
+            
+                // Hide all histograms except the selected one initially
+                visualizationContainers.forEach((containerId) => {
+                  const container = document.getElementById(containerId);
+                  if (containerId !== "hist_ES") {
+                    container.style.display = "none";
+                  }
+                });
+            
+                dropdown.addEventListener("change", () => {
+                  const selectedValue = dropdown.value;
+                  visualizationContainers.forEach((containerId) => {
+                    const container = document.getElementById(containerId);
+                    container.style.display = containerId === selectedValue ? "block" : "none";
+                  });
+                });
+              </script>
+             
+        </div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <div class="pure-g">
+      <div class="pure-u-1-1 small-font">
+        <p>This visualisation is created by <a href="https://github.com/cywng">Chang Yu Wang</a>, adapted from an
+          example made by <a href="https://github.com/KadekSatriadi" target="_blank">Kadek Satriadi</a>. The data is
+          from multiple files found on the <a
+            href="https://discover.data.vic.gov.au/dataset?sort=score+desc%2C+metadata_modified+desc&q=&organization=&groups=education&res_format="
+            target="_blank">Victorian Givernment website</href>.</p>
+      </div>
+    </div>
+  </div> <!-- end page -->
+</body>
+
+</html>

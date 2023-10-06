@@ -1,8 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Distance from CBD by Avg Home Price",
-    "width": 400,
+    "width": 350,
     "height": 150,
+    "config": {"background": "transparent"},
     "data": {"url": "data/Scatterplot data/Distance vs type of home.csv"},
     "encoding": {
       "x": {"field": "Distance", "type": "quantitative", "title": "Distance from CBD","scale": {"reverse":false}},

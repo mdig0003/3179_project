@@ -1,6 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-image: url(VIC-property-market-affordable-property-in-sought-after-locations.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed ;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -12,6 +15,7 @@ h1 {
     background-color: #007BFF;
     color: #fff;
   }
+
   
   
   /* Style for the histogram containers */
@@ -20,14 +24,6 @@ h1 {
     padding: 20px;
     background-color: #fff;
     display: auto;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Style for the dropdown box */
-#hist-dropdown {
-  display: block;
-  margin: 20px auto;
 }
 
 /* Center each visualization container */
@@ -39,55 +35,5 @@ h1 {
   margin: 10px auto;
   display: flex;
 }
-.hist-container {
-  display: flex;
-  justify-content: space-between; /* Distribute items evenly */
-}
 
-#treemap {
-  flex: 1; /* Take up available space */
-}
-
-#scatterplot {
-  width: 50%; /* Adjust the width as needed */
-  /* Optionally, you can add margin to separate the treemap and scatterplot */
-  margin-left: 10px;
-}
-
-#scatterplot_dist {
-  width: 50%; /* Adjust the width as needed */
-}
-#grouped-container {
-  background-color: #fff;
-  margin: 20px auto;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.container-flex {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start; /* Align items to the top */
-  
-}
-
-.left {
-  width: 50%; /* Adjust the width as needed */
-}
-
-.right {
-  width: 50%; /* Adjust the width as needed */
-}
-
-/* Optionally, add margin to separate the treemap and scatterplots */
-.right {
-  margin-left: 5px;
-}
-
-/* Clear floats to prevent issues with other elements */
-.container-flex::after {
-  content: "";
-  display: table;
-  clear: both;
-}
   

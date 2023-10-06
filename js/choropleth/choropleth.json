@@ -3,6 +3,7 @@
   "width": 300,
   "height": 250,
   "title": "Melbourne's Median House Prices",
+  "config": {"background": "transparent"},
   "data": {
     "url": "data/choropleth map/suburb-10-vic (1).json",
     "format": {
