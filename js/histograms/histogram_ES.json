@@ -3,7 +3,7 @@
     "data": {"url": "data/hist data/Eastern Suburb Median House Price.csv"},
     "title": "Eastern Suburbs",
     "config": {"background": "transparent"},
-    "width": 350,
+    "width": 300,
     "height": 200,
     "background": "transparent",
     "mark": "bar",
