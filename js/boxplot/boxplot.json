@@ -23,7 +23,9 @@
               ], "as": ["Month", "Value"]}
     ],
   "encoding": {
-    "y": {"field": "Region of Melbourne", "type": "nominal"  
+    "y": {"field": "Region of Melbourne", 
+    "type": "nominal",
+    "title": "Regions of Melbourne"
   },
     "x": {
       "field": "Value",

@@ -92,13 +92,19 @@
     <!-- Title and subtitle -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h1 style="font-family: Arial, Helvetica, sans-serif;">Melbourne Housing Prices (2015-2020)</h1>
-        <p>The dataset used in this project is sourced from Kaggle, comprising Melbourne real estate data from Domain.com.au. 
+        <h1>Melbourne Housing Prices (2015-2020)</h1>
+        <p style="line-height: 2;">The dataset used in this project is sourced from Kaggle, comprising Melbourne real estate data from Domain.com.au. 
             It offers detailed information about property address, type, price, location, and more. This dataset assists 
             in finding affordable housing in metropolitan Melbourne by enabling users to analyze property prices and key metrics, 
             aiding informed decisions for investors and homebuyers.</p>
-      <h2>Choropleth Map of Metropolitan Melbourne</h2>
+      </div>
+    </div>
+    <!-- end pure grid group -->
 
+    <!-- Caption/small text -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h2>What is Affordability Like in Metropolitan Melbourne?</h2>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -109,46 +115,41 @@
         <div id="vis" class="vis-container" style="padding-right: 100px;"></div>
       </div>
       <div class="pure-u-1-2">
-        <div class="description description-right" style="padding-left: 20px;" >           
-            <p>
-              The map highlights Melbourne's average property price range, with Boroondara, Bayside, and Stonnington council areas being the most expensive, while Moorabool 
-              and Melton City Council areas are the least expensive, as they are located in Greater Melbourne.            
+        <div class="description description-right" >           
+            <p style="padding-top: 50px; line-height: 2;">
+                The map highlights Melbourne's average property price range: 
+                <p>With <b>Boroondara, Bayside, and Stonnington</b> council areas being the <b>most expensive</b></p>
+                <p><b>Moorabool and Melton City Council</b> areas are the <b>least expensive</b>, as they are located in Greater Melbourne.</p>
             </p>
         </div>
       </div>
     </div>
     <!-- end pure grid group -->
-    
-    <!-- Caption/small text -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-        <p style="padding-right: 1px;"><small><i>fig 1.0 Median House Price Choropleth Map</i></small></p>
-      </div>
-    </div>
-    <!-- end pure grid group -->
 
     <!-- Caption/small text -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h2>Affordability in Metro Melbourne</h2>
+        <p><small><i>fig 1.0 Median House Price on a Choropleth Map</i></small></p>
       </div>
     </div>
     <!-- end pure grid group -->
 
-
-    <!--Chrorpleth map-->
+    <!--Tree map-->
     <div class="pure-g">
       <div class="pure-u-1-2">
         <div id="treemap" style="padding-right: 100px;"></div>
       </div>
       <div class="pure-u-1-2">
         <div class="description description-right">           
-          <p>
+          <p style="line-height: 2;">
             Further insights gleaned from the treemap highlight the top 
-            suburbs in metropolitan Melbourne with the highest average home
-            prices from each region in Melbourne (East,South,West,North and South East), shedding light on the areas where affordability may be 
-            particularly challenging.
-        </p>
+            suburbs in metropolitan Melbourne:
+          </p>
+          <p>With the highest average home prices from each region in Melbourne.</p> 
+          <p>Shedding light on the areas where affordability may be particularly challenging.</p>
+          <p>The highest median house price are homes from <b>Deepdene</b>.</p>
+          <p>The cheapest median house price are homes from <b>Oakleigh South</b>.</p>
+          <p></p>
         </div>
       </div>
     </div>
@@ -157,7 +158,7 @@
     <!-- Caption/small text -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <p style="padding-right: 1px;"><small><i>fig 2.0 Highest median house prices in Melbourne in Treemap</i></small></p>
+        <p><small><i>fig 1.1 Highest median house prices in Melbourne in Treemap</i></small></p>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -165,7 +166,7 @@
     <!-- Caption/small text -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h2>Trends across different Home Attributes</h2>
+        <h2>What are Trends in Different Home Attributes?</h2>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -173,20 +174,27 @@
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-2">
-        <div class="description description-right">
-          <p>In Melbourne, the pursuit of affordable housing is a multifaceted
+        <div class="description description-right" style="padding-top: 40px;">
+          <p style="line-height: 2;">
+             In Melbourne, the pursuit of affordable housing is a multifaceted
              challenge, as reflected in key trends observed in the available 
-             data. The scatterplot analysis reveals a noteworthy correlation 
-             between the number of bedrooms and home prices, with an increase 
-             in the number of bedrooms often resulting in higher property costs. 
+             data. 
           </p>
-          <p>
+          <p style="line-height: 2;">
+             The scatterplot analysis reveals a noteworthy correlation 
+             between the number of bedrooms and home prices, with an <b>increase</b> 
+             in the number of bedrooms often resulting in <b>higher property costs</b>. 
+             What data shows that the most expensive home on average is highest with 
+             6 bedrooms which is roughly <b>$1,900,000</b>.
+          </p>
+          <p style="line-height: 2; padding-bottom: 20px;">
             Additionally, the scatterplot indicating that home prices tend to 
             rise as properties draw closer to the city center underscores the 
             impact of location on affordability.
           </p>
         </div>
       </div>
+      <!--Scatterplots Graphs-->
       <div class="pure-u-1-2">
         <div id="scatterplot" class="vis-container"></div>
         <p style="padding-left: 20px;"><small><i>fig 3.0 Distance from CBD by Avg Home Price</i></small></p>
@@ -200,7 +208,7 @@
     <!-- Caption/small text -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h2>Analysing Trends of Different Regions</h2>
+        <h2>Does Price change based on Regions and Councils?</h2>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -208,6 +216,7 @@
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-2">
+        <!--Radial plot and boxplot-->
         <div id="radar" class="vis-container" style="padding-left: 50px;"></div>
         <p><small><i>fig 4.0 Radial plot of the differnt councilo areas of Melbourne</i></small></p>
         <div id="boxplot" class="vis-container" style="padding-right: 1000px;"></div>
@@ -215,23 +224,23 @@
       </div>
       <div class="pure-u-1-2">
         <div class="description description-right">
-          <p>
-            The radial plot analysis highlights Boroondara as having the highest 
-            average house prices in Victoria, potentially due to its robust 
-            infrastructure, resources, schools, and other amenities. Stonnington
-            also exhibits high prices, likely for similar reasons. These findings
-            emphasize the role of location-related factors in shaping property 
-            values in these areas.
-          </p>
-          <p><small>
-            The boxplot reflects similar data to the radial plot. However showing that
-            Southern suburbs are selling homes more expensive on a monthly scale.
-          </small>
-    
-          </p>
-          <p>
-            This analysis shows that homes are more affordable in <b>Western</b> and <b>Northern</b> suburbs.
-          </p>
+            <p style="line-height: 2;">
+              The radial plot analysis highlights <b>Boroondara</b> as having the <b>highest 
+              average house prices</b> in Victoria, potentially due to its robust 
+              infrastructure, resources, schools, and other amenities. 
+            </p>
+            <p style="line-height: 2;">
+              <b>Stonnington</b> also exhibits high prices, likely for similar reasons. These findings
+              emphasize the role of location-related factors in shaping property 
+              values in these areas.
+            </p>
+            <p style="line-height: 2;">
+              The boxplot reflects similar data to the radial plot. However showing that
+              <b>Southern suburbs are selling homes more expensive</b> on a monthly scale.
+            </p>
+            <p style="line-height: 2;">
+              This analysis shows that homes are more affordable in <b>Western</b> and <b>Northern</b> suburbs.
+            </p>
         </div>
       </div>
     </div>
@@ -240,7 +249,7 @@
     <!-- Caption/small text -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h2>How Much are Homes Purchased for in Melbourne?</h2>
+        <h2>How Much are Homes Purchased for in Metropolitan Melbourne?</h2>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -249,15 +258,19 @@
     <div class="pure-g">
       <div class="pure-u-1-2">
         <div class="description description-right">
-            <p>Finally we can see that in the Eastern subrubs the price of selling at most around
-              $800,000, Western suburbs homes are selling for at most $650,000, Northern suburbs
-            are selling for around $750,000, Southern suburbs are selling for around $600,000-$800,000
-          and most properties in South Eastern suburbs are selling for around $600,000-$650,000.  </p>
+            <p style="padding-top: 0px; line-height: 2;">
+              In summary, the housing prices in Melbourne's different suburbs can be described as follows:
+
+              <p>Eastern suburbs: Most homes are selling for up to approximately <b>$800,000</b>.</p>
+              <p>Western suburbs: Homes are generally priced at a maximum of around <b>$650,000</b>.</p>
+              <p>Northern suburbs: Homes typically sell for around <b>$750,000</b>.</p>
+              <p>Southern suburbs: Home prices range from approximately <b>$600,000</b> to <b>$800,000</b>.</p>
+              South Eastern suburbs: Most properties are selling for prices ranging from about <b>$600,000</b> to <b>$650,000</b>. </p>
         </div>
       </div>
       <div class="pure-u-1-2">
         <div class="vis-container">
-            <div id="hist-dropdown">
+            <div id="hist-dropdown" style="padding-top: 50px;">
                 <label for="histogram-select">Select a Histogram:</label>
                 <select id="histogram-select">
                   <option value="hist_ES" selected>Eastern Suburb</option> <!-- Set 'selected' here -->
@@ -306,8 +319,7 @@
 
     <div class="pure-g">
       <div class="pure-u-1-1 small-font">
-        <p>This visualisation is created by <a href="https://github.com/mdig0003">Michael Di Giantomasso</a>, adapted from an
-          example made by <a href="https://github.com/KadekSatriadi" target="_blank">Kadek Satriadi</a>. The data is
+        <p>This visualisation is created by <a href="https://github.com/mdig0003">Michael Di Giantomasso</a>. The data is
           from multiple files found on the <a
             href="https://discover.data.vic.gov.au/dataset?sort=score+desc%2C+metadata_modified+desc&q=&organization=&groups=education&res_format="
             target="_blank">Victorian Givernment website</href>, <a href="https://www.kaggle.com/" target="_blank">Kaggle</a> and <a href="https://www.domain.com.au/" target="_blank">Domain.com</a> .</p>

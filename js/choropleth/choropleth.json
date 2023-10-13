@@ -1,6 +1,5 @@
 {   
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Median House Price in Melbourne",
     "width": 200,
     "height": 300,
     "data": {
@@ -44,7 +43,7 @@
             "scale": {
              "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"],
               "domain": [0,1250000,2000000]            
-            }
+            }          
           },
           "tooltip": [
             {"field": "properties.vic_loca_2", "type": "nominal", "title": "Suburb"},
