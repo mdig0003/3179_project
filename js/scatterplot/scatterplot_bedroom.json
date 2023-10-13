@@ -19,7 +19,8 @@
       "field": "Average_Price",
       "type": "quantitative",
       "title":"Average Price of Home ($AUS)",
-      "scale": {"zero": false}
+      "scale": {"zero": false},
+      "axis":{"format": "$,.0f"}
     },
     "color": {"field": "Type", "type": "nominal"},
     "shape": {"field": "Type", "type": "nominal"},

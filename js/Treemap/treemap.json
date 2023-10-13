@@ -62,8 +62,7 @@
           "x2": { "field": "x1" },
           "y": { "field": "y0" },
           "y2": { "field": "y1" }
-        },
-        "tooltip": {"field": "Region" , "title": "Region in Melbourne"}
+        }
       }
     },
     {
@@ -74,7 +73,8 @@
           "align": { "value": "center" },
           "baseline": { "value": "middle" },
           "fill": { "value": "Black" },
-          "fontSize": { "value": 7 }
+          "fontSize": { "value": 7 },
+          "tooltip": [{"field": "Region" , "title": "Region in Melbourne"}]
         },
         "update": {
           "x": { "signal": "(datum.x0 + datum.x1) / 2" },

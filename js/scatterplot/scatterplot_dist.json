@@ -13,7 +13,8 @@
       "field": "Average_Price_rounded",
       "type": "quantitative",
       "title": "Average Price ($AUS)",
-      "scale": {"zero": false}
+      "scale": {"zero": false},
+      "axis":{"format": "$,.0f"}
     },
     "x": {
       "field": "Distance",
@@ -24,7 +25,7 @@
     "color": {"field": "Type", "type": "nominal"},
     "shape": {"field": "Type", "type": "nominal"},
     "tooltip":[
-      {"field":"Average_Price_rounded", "title":"Average Price of Home ($AUS)","format":"$,.2f"},
+      {"field":"Average_Price_rounded", "title":"Average Price of Home ($AUS)","format":"$,.0f"},
       {"field":"Type","title":"Dwelling Type"},
       {"field":"Distance", "title":"Distance from CBD (Km)"}
     ]
