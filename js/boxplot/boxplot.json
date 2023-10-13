@@ -1,7 +1,6 @@
 {   
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "data/Line Chart/Scatterplot Region of Melbourne by Month.csv"},
-  "title": "Region by Monthly Average Selling Price's",
   "config": {"background": "transparent"},
   "height": 150,
   "width":150,
@@ -24,8 +23,7 @@
               ], "as": ["Month", "Value"]}
     ],
   "encoding": {
-    "y": {"field": "Region of Melbourne", "type": "nominal",
-    "title": ""
+    "y": {"field": "Region of Melbourne", "type": "nominal"  
   },
     "x": {
       "field": "Value",

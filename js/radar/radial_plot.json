@@ -1,7 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A simple radial chart with embedded data.",
-    "title":"Radial Plot of Average House Price in Council Area",
     "data": {
       "url": "data/Radar Data/Avg house price by council.csv","name": "avg_council"
     },

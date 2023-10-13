@@ -1,6 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Scatterplot of Housing Prices by Number of Bedrooms",
     "width": 300,
     "height": 150,
     "config": {"background":"transparent"},

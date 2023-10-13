@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Distance from CBD by Avg Home Price",
   "width": 300,
   "height": 150,
   "config": {"background": "transparent"},
@@ -13,7 +12,7 @@
   ],
   "encoding": {
     "x": {"field": "Distance", "type": "quantitative", "title": "Distance from CBD", "scale": {"reverse": false}},
-    "y": {"field": "h", "type": "quantitative", "title": "Avg Price of Home $"},
+    "y": {"field": "h", "type": "quantitative", "title": "Avg Price of Home ($AUS)"},
     "color": {"value": "blue"}
   },
   "layer": [

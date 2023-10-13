@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "width": 650,
+  "width": 350,
   "height": 300,
-  "padding": 5,
+  "padding": 0,
   "signals": [
     {
       "name": "method",
@@ -62,7 +62,8 @@
           "x2": { "field": "x1" },
           "y": { "field": "y0" },
           "y2": { "field": "y1" }
-        }
+        },
+        "tooltip": {"field": "Region" , "title": "Region in Melbourne"}
       }
     },
     {
@@ -73,7 +74,7 @@
           "align": { "value": "center" },
           "baseline": { "value": "middle" },
           "fill": { "value": "Black" },
-          "fontSize": { "value": 10 }
+          "fontSize": { "value": 7 }
         },
         "update": {
           "x": { "signal": "(datum.x0 + datum.x1) / 2" },
