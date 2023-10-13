@@ -4,8 +4,8 @@
     "width": 200,
     "height": 300,
     "data": {
-      "url": "data/choropleth map/suburb-10-vic (1).json",
-      "format": {"type": "topojson", "feature": "suburb-10-vic"}
+      "url": "data/choropleth map/melbourne_map.json",
+      "format": {"type": "topojson", "feature": "Vic_map"}
     },
     "projection": {
     "type": "mercator"
@@ -43,12 +43,12 @@
             "type": "quantitative",
             "scale": {
              "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"],
-              "domain": [0,1250000,2500000]            
+              "domain": [0,1250000,2000000]            
             }
           },
           "tooltip": [
             {"field": "properties.vic_loca_2", "type": "nominal", "title": "Suburb"},
-            {"field": "Median House Price", "type": "quantitative", "title": "Median House Price"}        
+            {"field": "Median House Price", "type": "quantitative", "title": "Median House Price", "format":"$,.0f"}        
           ]
         }
       }

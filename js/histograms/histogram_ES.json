@@ -11,7 +11,7 @@
       "x": {
         "bin": {"maxbins": 15},
         "field": "Median House Price",
-        "title": "Median House Price"
+        "title": "Median House Price ($AUS)"
       },
       "y": {"aggregate": "count", "type":"quantitative", "title": "Frequency"}    } 
   }

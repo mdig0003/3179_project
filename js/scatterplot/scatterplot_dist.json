@@ -25,7 +25,8 @@
     "shape": {"field": "Type", "type": "nominal"},
     "tooltip":[
       {"field":"Average_Price_rounded", "title":"Average Price of Home ($AUS)","format":"$,.2f"},
-      {"field":"Type","title":"Dwelling Type"}
+      {"field":"Type","title":"Dwelling Type"},
+      {"field":"Distance", "title":"Distance from CBD (Km)"}
     ]
   }
 }
