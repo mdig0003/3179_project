@@ -2,30 +2,31 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 260,
   "data": {
-    "url": "data/Scatterplot data/average_prices_by_Distance.csv"
+    "url": "data/Scatterplot data/average_prices_by_bedroom_type.csv"
   },
-  "mark": "point",
   "transform": [
     {"filter": "datum.Average_Price !== ''"}
   ],
+  "mark": "point",
   "encoding": {
-    "y": {
-      "field": "Average_Price_rounded",
+    "x": {
+      "field": "Bedroom2",
       "type": "quantitative",
-      "title": "Average Price ($AUS)",
+      "title": "Number of Bedrooms",
       "scale": {"zero": false}
     },
-    "x": {
-      "field": "Distance",
+    "y": {
+      "field": "Average_Price",
       "type": "quantitative",
-      "title": "Distance (Km)",
+      "title":"Average Price of Home ($AUS)",
       "scale": {"zero": false}
     },
     "color": {"field": "Type", "type": "nominal"},
     "shape": {"field": "Type", "type": "nominal"},
     "tooltip":[
-      {"field":"Average_Price_rounded", "title":"Average Price of Home ($AUS)","format":"$,.2f"},
-      {"field":"Type","title":"Dwelling Type"}
+      {"field":"Average_Price", "title":"Average Price of Home ($AUS)","format":"$,.0f"},
+      {"field":"Type", "title":"Dwelling Type"}
+
     ]
   }
 }
