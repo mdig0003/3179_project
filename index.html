@@ -42,7 +42,7 @@
     }
 
     body {
-        background-image: url(png/photo-1612415491873-144fd5e03169.jpeg);
+        /*background-image: url(png/photo-1612415491873-144fd5e03169.jpeg);*/
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -92,11 +92,13 @@
     <!-- Title and subtitle -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h1>Melbourne Housing Prices (2015-2020)</h1>
-        <p style="line-height: 2;">The dataset used in this project is sourced from Kaggle, comprising Melbourne real estate data from Domain.com.au. 
-            It offers detailed information about property address, type, price, location, and more. This dataset assists 
-            in finding affordable housing in metropolitan Melbourne by enabling users to analyze property prices and key metrics, 
-            aiding informed decisions for investors and homebuyers.</p>
+        <h1>Melbourne Real Estate Prices (2015-2020)</h1>
+        <p style="line-height: 2;">Sourced from Kaggle via Domain.com.au, this Melbourne 
+          real estate dataset offers a wealth of information on property details, 
+          including addresses, types, prices, and locations. 
+          It serves as a valuable resource for investors and homebuyers, 
+          enabling them to make informed decisions to purchase affordable homes in 
+          prime Melbourne locations. </p>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -140,15 +142,13 @@
         <div id="treemap" style="padding-right: 100px;"></div>
       </div>
       <div class="pure-u-1-2">
-        <div class="description description-right">           
+        <div class="description description-right;" style="padding-top: 70px;">           
           <p style="line-height: 2;">
             Further insights gleaned from the treemap highlight the top 
             suburbs in metropolitan Melbourne:
           </p>
-          <p>With the highest average home prices from each region in Melbourne.</p> 
-          <p>Shedding light on the areas where affordability may be particularly challenging.</p>
-          <p>The highest median house price are homes from <b>Deepdene</b>.</p>
-          <p>The cheapest median house price are homes from <b>Oakleigh South</b>.</p>
+          <p style="line-height: 2;">The highest median house price are homes from <b>Deepdene</b>.</p>
+          <p style="line-height: 2;">The cheapest median house price are homes from <b>Oakleigh South</b>.</p>
           <p></p>
         </div>
       </div>
@@ -197,7 +197,7 @@
       <!--Scatterplots Graphs-->
       <div class="pure-u-1-2">
         <div id="scatterplot" class="vis-container"></div>
-        <p style="padding-left: 20px;"><small><i>fig 3.0 Scatterplot of Housing Prices by Number of Bedrooms</i></small></p>
+        <p style="padding-left: 20px;"><small><i>fig 3.0 Scatterplot of Average Housing Prices by Number of Bedrooms</i></small></p>
         <div id="scatterplot_dist" class="vis-container"></div>
         <p style="padding-left: 20px;"><small><i>fig 3.1 Distance from CBD by Avg Home Price</i></small></p>
         </p>
@@ -218,9 +218,9 @@
       <div class="pure-u-1-2">
         <!--Radial plot and boxplot-->
         <div id="radar" class="vis-container" style="padding-left: 50px;"></div>
-        <p><small><i>fig 4.0 Radial plot of the differnt councilo areas of Melbourne</i></small></p>
+        <p><small><i>fig 4.0 Radial plot of the differnt council areas of Melbourne</i></small></p>
         <div id="boxplot" class="vis-container" style="padding-right: 1000px;"></div>
-        <p><small><i>fig 4.1 Boxplots of regions in Melbourne Metropolitan Area</i></small></p>
+        <p><small><i>fig 4.1 Boxplots of regions in Melbourne metropolitan area</i></small></p>
       </div>
       <div class="pure-u-1-2">
         <div class="description description-right">
@@ -312,6 +312,26 @@
                 });
               </script>
                 <p><small><i>fig 5.0 Histograms showing how much homes are purchased for in Melbourne</i></small></p>
+        </div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- Caption/small text -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h2>What We can Conclude?</h2>
+        <div>
+          <p style="line-height: 2;">
+            From the data provdied, we can show that the most affordable homes are found 
+            within <b> northern</b> and <b>western suburbs</b> of Melbourne.
+          </p>
+          <p>
+            The most expensive suburbs of Melbourne are found in the <b>southern</b> and <b>eastern</b> surbubs.
+          </p>
+          <p>
+            Hence, homebuyers in Melbourne, should be purchasing homes in around <b>northern</b> and <b>western</b> suburbs. 
+          </p>
         </div>
       </div>
     </div>
