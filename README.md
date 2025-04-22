@@ -36,11 +36,11 @@ To view the project:
 1. Clone the repositry:
    ```bash
    git clone https://github.com/mdig0003/3179_project.git
-   ``
+   ```
 2. Navigate to the project directry:
    ```bash
    cd 3179_project
-   ``
+   ```
 3. Open `index.html` in a web browser to view the visualizatins.
 
 ## 🌐 Live Dmo
