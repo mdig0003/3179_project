@@ -3,7 +3,8 @@
 This project offers an interactive exploration of Melbourne’s housing market, focusing on visualising real estate price trends across different suburbs and property types.
 
 ## 🔍 Overview
-The project utilises a dataset containing property sales data from Melbourne, AustraliaIt includes information such as
+The project utilises a dataset containing property sales data from Melbourne, AustraliaIt includes information such as:
+
 - Suburb
 - Address
 - Number of rooms
@@ -11,6 +12,7 @@ The project utilises a dataset containing property sales data from Melbourne, Au
 - Sale price
 - Date of sale
 - Latitude and longitude
+
 The main objective is to provide insights into the housing market through various data visualisations
 
 ## 📁 Project Structure
