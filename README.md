@@ -43,6 +43,11 @@ To view the project:
    ```
 3. Open `index.html` in a web browser to view the visualizatins.
 
+Or
+
+Simply view here using the URL:
+https://mdig0003.github.io/3179_project/
+
 ## 🌐 Live Dmo
 
 Access the live version of the project etch0
