@@ -1,7 +1,3 @@
-tlwm3179_project GitHub Repositoryturn0fetch0
-
----
-
 # 3179_project: Melbourne Housing Market Data Visualisation
 
 This project offers an interactive exploration of Melbourne’s housing market, focusing on visualizing real estate price trends across different suburbs and property types.
